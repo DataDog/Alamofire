@@ -28,8 +28,11 @@ jobs:
       uses: Datadog/swift-test-action@v1
       with:
           api_key: ${{ secrets.DD_API_KEY }}
-          application_key: " "
+          application_key: ${{ secrets.DD_APPLICATION_KEY }}
           libraryVersion: 2.2.3-beta.3
       env: 
           DD_TRACE_DEBUG: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
+          DD_CIVISIBILITY_CODE_COVERAGE_ENABLED: "0"
+          DD_CIVISIBILITY_ITR_ENABLED: "0"
+          DD_CIVISIBILITY_GIT_UPLOAD_ENABLED: "0"
