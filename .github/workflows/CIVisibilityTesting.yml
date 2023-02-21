@@ -35,3 +35,5 @@ jobs:
       env: 
           DD_TRACE_DEBUG_CALLSTACK: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
+          DD_CIVISIBILITY_CODE_COVERAGE_ENABLED: "0"
+          
