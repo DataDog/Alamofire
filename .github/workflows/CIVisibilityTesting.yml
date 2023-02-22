@@ -28,6 +28,7 @@ jobs:
 
     - name: Run tests with Datadog 
       uses: Datadog/swift-test-action@main
+      continue-on-error: true
       with:
           api_key: ${{ secrets.DD_API_KEY }}
           application_key: ${{ secrets.DD_APPLICATION_KEY }}
@@ -35,4 +36,9 @@ jobs:
       env: 
           DD_TRACE_DEBUG_CALLSTACK: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
+      
+    - uses: actions/upload-artifact@v3
+      with:
+        name: DiagnosticReports
+        path: /Library/Logs/DiagnosticReports
           
