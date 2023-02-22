@@ -23,7 +23,10 @@ jobs:
 
     - name: Merge upstream
       run: git pull --allow-unrelated-histories upstream master
-
+      
+    - name: Setup upterm session
+      uses: lhotari/action-upterm@v1
+      
     - name: Run tests with Datadog 
       uses: Datadog/swift-test-action@v1
       with:
@@ -33,7 +36,6 @@ jobs:
       env: 
           DD_TRACE_DEBUG: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
-    - name: Setup upterm session
-      uses: lhotari/action-upterm@v1
+
           
         
