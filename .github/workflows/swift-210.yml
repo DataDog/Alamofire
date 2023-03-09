@@ -24,11 +24,6 @@ jobs:
     - name: Merge upstream
       run: git pull --allow-unrelated-histories upstream master
       
-    - name: Run git command for unshallowing
-      run: git fetch --shallow-since="1 month ago" --update-shallow --refetch
-    - name: Run git rev-list
-      run: git rev-list --objects --no-object-names --filter=blob:none --since="1 month ago" HEAD
-      
     - name: Run tests with Datadog 
       uses: Datadog/swift-test-action@v1
       continue-on-error: true
