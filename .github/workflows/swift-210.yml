@@ -35,8 +35,8 @@ jobs:
           DD_TRACE_DEBUG: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
       
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+#    - name: Setup tmate session
+#      uses: mxschmitt/action-tmate@v3
 
           
         
