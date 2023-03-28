@@ -30,7 +30,7 @@ jobs:
       with:
           api_key: ${{ secrets.DD_API_KEY }}
           application_key: ${{ secrets.DD_APPLICATION_KEY }}
-          libraryVersion: 2.2.6-beta.1
+          libraryVersion: 2.2.6-beta.2
       env: 
           DD_TRACE_DEBUG: "1"
           DD_DISABLE_NETWORK_INSTRUMENTATION: "1"
