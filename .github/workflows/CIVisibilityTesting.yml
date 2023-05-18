@@ -4,8 +4,8 @@
 name: Update and instrument tests
 
 on:
-  schedule:
-  - cron: 0 2 * * 1-5
+ # schedule:
+ # - cron: 0 2 * * 1-5
   workflow_dispatch:
 
 
